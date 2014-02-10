@@ -12,7 +12,7 @@ This starts a basic server, dishing up content in the current folder.
 [Backbone](http://backbonejs.org/). You just need to specify the model names on the command line and a simple
 RESTful API is exposed with that name. For example:
 
-    $ python backbone_server.py books
+    $ ./backbone_server.py books
     Adding collection: books
     Serving HTTP on 0.0.0.0 port 8000 ...
     
@@ -40,7 +40,7 @@ nothing fancy going on.
 
 You can specify multiple models on the command line:
 
-    $ python backbone_server.py books authors ratings
+    $ ./backbone_server.py books authors ratings
     Adding collection: books
     Adding collection: authors
     Adding collection: ratings
@@ -50,6 +50,6 @@ You can specify multiple models on the command line:
 
 By default, when you stop the server (with Ctrl+Z), all the data is lost. But you can persist the data in a named file:
 
-    $ python backbone_server.py books --persist books.json
+    $ ./backbone_server.py books --persist books.json
 
 When the server starts, existing records will be read from that file and on shutdown, the records will be written to that file, overwriting it.
